@@ -9,7 +9,7 @@ const WaitlistSection = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = emailSchema.safeParse(email);
     if (!result.success) {
@@ -17,6 +17,14 @@ const WaitlistSection = () => {
       return;
     }
     setError("");
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbzYy0TisYEQzROMW2gntRWmXzb1fEJQjMjH0hf-hblocMmk9ncx6GnizoF5OgqsnP1G/exec", {
+        method: "POST",
+        body: JSON.stringify({ email: result.data }),
+      });
+    } catch {
+      // silently continue — don't block the user if the request fails
+    }
     setSubmitted(true);
   };
 
