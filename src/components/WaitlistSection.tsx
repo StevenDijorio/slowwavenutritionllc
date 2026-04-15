@@ -18,8 +18,10 @@ const WaitlistSection = () => {
     }
     setError("");
     try {
-      await fetch("https://script.google.com/macros/s/AKfycbyglVI1pzUvblZ7KE67f8Gv3Tdx6xpzISMGD3SrMMXSMN2UgFsKuZYFrO4UaOrEDJuP/exec", {
+      await fetch("https://script.google.com/macros/s/AKfycbycM552hktz29Lji94jfULyvDy12eQzPx2A7peiFAP4Sb8ydO7MCZfGUbyuI7Thkuea/exec", {
         method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: result.data }),
       });
     } catch {
