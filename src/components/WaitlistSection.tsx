@@ -18,7 +18,7 @@ const WaitlistSection = () => {
     }
     setError("");
     try {
-      await fetch("https://script.google.com/macros/s/AKfycbzYy0TisYEQzROMW2gntRWmXzb1fEJQjMjH0hf-hblocMmk9ncx6GnizoF5OgqsnP1G/exec", {
+      await fetch("https://script.google.com/macros/s/AKfycbxe7d9obtZXyu4SbbDOBP77Lc-KLffjhFc6eKFz-Xpl6rA713jL0RkG2ADo4uUI1Mpi/exec", {
         method: "POST",
         body: JSON.stringify({ email: result.data }),
       });
