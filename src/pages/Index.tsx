@@ -4,7 +4,8 @@ import ProblemSection from "@/components/ProblemSection";
 import ScienceSection from "@/components/ScienceSection";
 import IngredientsSection from "@/components/IngredientsSection";
 import RitualSection from "@/components/RitualSection";
-import WaitlistSection from "@/components/WaitlistSection";
+import PreOrderSection from "@/components/PreOrderSection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 
 const Index = () => (
@@ -15,7 +16,8 @@ const Index = () => (
     <ScienceSection />
     <IngredientsSection />
     <RitualSection />
-    <WaitlistSection />
+    <PreOrderSection />
+    <FAQSection />
     <Footer />
   </div>
 );
